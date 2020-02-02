@@ -5,9 +5,15 @@ Xfce desktop environment.
 
 ## Usage
 
+Simple usage:
+
 ```
-docker run -d -p 5900:5900 -e VNC_PASSWD=password dcsunset/ubuntu-vnc
+docker run -d -p 5900:5900 -p 6080:6080 -e VNC_PASSWD=password dcsunset/ubuntu-vnc
 ```
+
+Then visit http://localhost:6080 to visit noVNC UI.
+Or you can use a different VNC client (like TigerVNC client)
+and connect to localhost:5900.
 
 If `VNC_PASSWD` is not set,
 then the security type of vncserver is set to None,
@@ -25,6 +31,7 @@ only the following applications are installed by default:
 
 * Xfce desktop
 * TigerVNC server
+* noVNC
 * Vim
 * Chromium browser
 
