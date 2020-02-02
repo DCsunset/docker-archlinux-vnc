@@ -15,7 +15,7 @@ ENV websockify_version=0.9.0
 RUN apt-get update \
 	&& DEBIAN_FRONTEND=noninteractive apt-get install -yq xfce4 xfce4-goodies \
 	tigervnc-standalone-server \
-	chromium-browser vim \
+	chromium-browser vim wget \
 	python3-numpy python3-setuptools \
 	&& rm -rf /var/lib/apt/lists/*
 
