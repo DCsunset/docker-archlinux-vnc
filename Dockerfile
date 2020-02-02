@@ -21,7 +21,7 @@ RUN apt-get update \
 
 # Install noVNC
 RUN wget https://github.com/novnc/websockify/archive/v${websockify_version}.tar.gz -O /websockify.tar.gz \
-	tar -xvf /websockify.tar.gz -C / \
+	&& tar -xvf /websockify.tar.gz -C / \
 	&& cd /websockify-${websockify_version} \
 	&& python3 setup.py install \
 	&& cd / && rm -r /websockify.tar.gz /websockify-${websockify_version} \
