@@ -1,7 +1,9 @@
 # docker-ubuntu-vnc
 
-An Ubuntu docker image to provide VNC access to
-Xfce desktop environment.
+[![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/dcsunset/ubuntu-vnc)](https://hub.docker.com/r/dcsunset/ubuntu-vnc)
+[![Docker Image Size](https://badgen.net/docker/size/dcsunset/ubuntu-vnc)](https://hub.docker.com/r/dcsunset/ubuntu-vnc)
+
+A docker image of Ubuntu with Xfce desktop and VNC support.
 
 ## Usage
 
@@ -32,6 +34,7 @@ only the following applications are installed by default:
 * Xfce desktop
 * TigerVNC server
 * noVNC
+* wget
 * Vim
 * Chromium browser
 
