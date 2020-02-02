@@ -1,0 +1,10 @@
+[Desktop Entry]
+NoDisplay=true
+Version=1.0
+Encoding=UTF-8
+Type=X-XFCE-Helper
+X-XFCE-Category=WebBrowser
+X-XFCE-CommandsWithParameter=chromium-browser --no-sandbox "%s"
+Icon=chromium-browser
+Name=chromium-browser
+X-XFCE-Commands=chromium-browser --no-sandbox
