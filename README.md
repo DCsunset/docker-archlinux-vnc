@@ -78,3 +78,8 @@ apt-get install fonts-noto
 
 By default, noVNC's scaling mode is set to None.
 It can be changed in the noVNC panel easily.
+
+
+# License
+
+MIT License
