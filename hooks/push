@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# original docker push command
+echo "overwriting docker push $IMAGE_NAME"
+
+cat "../versions.txt" | while read VERSION
+do
+    # The new image tag will include the version of ubuntu
+    IMAGE_TAG="${DOCKER_REPO}:${VERSION}"
+
+    echo "docker push ${IMAGE_TAG}"
+    docker push ${IMAGE_TAG}
+done
