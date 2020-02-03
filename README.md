@@ -5,6 +5,16 @@
 
 A docker image of Ubuntu with Xfce desktop and VNC support.
 
+## Tags
+
+Different tags of this image are based on different versions of ubuntu.
+
+Currently available tags:
+
+* latest: based on ubuntu:lastest
+* 18.04: based on ubuntu:18.04
+* 16.04: based on ubuntu:16.04
+
 ## Usage
 
 Simple usage:
@@ -35,6 +45,7 @@ only the following applications are installed by default:
 * TigerVNC server
 * noVNC
 * wget
+* Python3
 * Vim
 * Chromium browser
 
