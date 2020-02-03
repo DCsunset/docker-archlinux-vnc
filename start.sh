@@ -9,10 +9,10 @@ tigervnc_path="/tigervnc-${tigervnc_version}.x86_64/usr/bin"
 # Start TigerVNC
 if [ ! -z $VNC_PASSWD ]; then
 	${tigervnc_path}/vncpasswd -f <<< "$VNC_PASSWD" > "$HOME/.vnc/passwd"
-	${tigervnc_path}/vncserver :0
+	${tigervnc_path}/vncserver -rfbport 5900
 else
 	${tigervnc_path}/vncpasswd -f <<< "" > "$HOME/.vnc/passwd"
-	${tigervnc_path}/vncserver -SecurityTypes None :0
+	${tigervnc_path}/vncserver -rfbport 5900 -SecurityTypes None
 fi
 
 # Start noVNC
