@@ -3,7 +3,7 @@
 # original docker build command
 echo "overwriting docker build -f $DOCKERFILE_PATH -t $IMAGE_NAME ."
 
-cat "../versions.txt" | while read VERSION
+cat "versions.txt" | while read VERSION
 do
     # The new image tag will include the version of ubuntu
 	IMAGE_TAG="${DOCKER_REPO}:${VERSION}"
