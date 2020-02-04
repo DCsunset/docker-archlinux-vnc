@@ -5,6 +5,14 @@
 
 A docker image of Ubuntu with Xfce desktop and VNC support.
 
+## Screenshots
+
+![Figure 1](./screenshots/1.png)
+
+![Figure 2](./screenshots/2.png)
+
+![Figure 3](./screenshots/3.png)
+
 ## Tags
 
 Different tags of this image are based on different versions of ubuntu.
