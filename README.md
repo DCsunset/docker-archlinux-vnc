@@ -21,6 +21,14 @@ Currently available tags:
 * 18.04: based on ubuntu:18.04
 * 16.04: based on ubuntu:16.04
 
+## Pull image
+
+```
+docker pull dcsunset/ubuntu-vnc:<tag>
+```
+
+The tag can be one of those listed above.
+
 ## Usage
 
 Simple usage:
@@ -29,7 +37,7 @@ Simple usage:
 docker run -d -p 5900:5900 -p 6080:6080 -e VNC_PASSWD=password dcsunset/ubuntu-vnc
 ```
 
-Then visit http://localhost:6080 to visit noVNC UI.
+Then visit <http://localhost:6080> to visit noVNC UI.
 Or you can use a different VNC client (like TigerVNC client)
 and connect to localhost:5900.
 
