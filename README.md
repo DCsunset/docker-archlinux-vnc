@@ -1,9 +1,9 @@
-# docker-ubuntu-vnc
+# docker-archlinux-vnc
 
-[![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/dcsunset/ubuntu-vnc)](https://hub.docker.com/r/dcsunset/ubuntu-vnc)
-[![Docker Image Size](https://badgen.net/docker/size/dcsunset/ubuntu-vnc)](https://hub.docker.com/r/dcsunset/ubuntu-vnc)
+[![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/dcsunset/archlinux-vnc)](https://hub.docker.com/r/dcsunset/archlinux-vnc)
+[![Docker Image Size](https://badgen.net/docker/size/dcsunset/archlinux-vnc)](https://hub.docker.com/r/dcsunset/archlinux-vnc)
 
-A docker image of Ubuntu with Xfce desktop and VNC support.
+A docker image of Arch Linux with Xfce desktop and VNC support.
 
 ## Screenshots
 
@@ -11,20 +11,11 @@ A docker image of Ubuntu with Xfce desktop and VNC support.
 
 ![Figure 2](./screenshots/2.png)
 
-## Tags
-
-Different tags of this image are based on different versions of ubuntu.
-
-Currently available tags:
-
-* latest: based on ubuntu:lastest
-* 18.04: based on ubuntu:18.04
-* 16.04: based on ubuntu:16.04
 
 ## Pull image
 
 ```
-docker pull dcsunset/ubuntu-vnc:<tag>
+docker pull dcsunset/archlinux-vnc
 ```
 
 The tag can be one of those listed above.
@@ -34,7 +25,7 @@ The tag can be one of those listed above.
 Simple usage:
 
 ```
-docker run -d -p 5900:5900 -p 6080:6080 -e VNC_PASSWD=password dcsunset/ubuntu-vnc
+docker run -d -p 5900:5900 -p 6080:6080 -e VNC_PASSWD=password dcsunset/archlinux-vnc
 ```
 
 Then visit <http://localhost:6080> to visit noVNC UI.
@@ -55,27 +46,19 @@ it is **insecure** when exposing the container on the Internet.
 To make the image lightweight,
 only the following applications are installed by default:
 
-* Xfce desktop
-* TigerVNC server
+* xfce4
+* tigervnc
 * noVNC
 * wget
-* Python3
-* Vim
-* Chromium browser
+* vim
+* chromium
 
 ## Build
 
-To use the latest Ubuntu image:
-
 ```
-docker build -t ubuntu-vnc .
+docker build -t archlinux-vnc .
 ```
 
-Or specify a version:
-
-```
-docker build --build-arg VERSION=18.04 -t ubuntu-vnc .
-```
 
 ## FAQ
 
@@ -87,19 +70,19 @@ install the font packs based on your needs.
 To install the Indian font pack:
 
 ```
-apt-get install fonts-indic
+pacman -Sy fonts-indic
 ```
 
 To install the CJK font pack:
 
 ```
-apt-get install fonts-noto-cjk
+pacman -Sy fonts-noto-cjk
 ```
 
 To install the international font pack:
 
 ```
-apt-get install fonts-noto
+pacman -Sy fonts-noto
 ```
 
 ### Scaling
