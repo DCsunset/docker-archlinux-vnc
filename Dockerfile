@@ -14,9 +14,9 @@ ENV websockify_version=0.9.0
 
 # Install apps
 RUN pacman -Syu --noconfirm xfce4 xfce4-goodies \
-	chromium vim wget tigervnc \
-	python-numpy python-setuptools
-#	&& pacman -Scc --noconfirm
+	chromium vim wget tigervnc xorg \
+	python-numpy python-setuptools \
+	&& pacman -Scc --noconfirm
 
 # Install noVNC
 RUN	wget https://github.com/novnc/websockify/archive/v${websockify_version}.tar.gz -O /websockify.tar.gz \
