@@ -7,14 +7,13 @@ ENV noVNC_version=1.1.0
 ENV websockify_version=0.9.0
 
 # Local debug
-# RUN echo "Server = https://mirrors.ustc.edu.cn/archlinux/\$repo/os/\$arch" > /etc/pacman.d/mirrorlist
-# RUN echo "Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/\$repo/os/\$arch" >> /etc/pacman.d/mirrorlist
+# COPY ./mirrorlist /etc/pacman.d/mirrorlist 
 # COPY ./websockify-${websockify_version}.tar.gz /websockify.tar.gz
 # COPY ./noVNC-${noVNC_version}.tar.gz /noVNC.tar.gz
 
 # Install apps
-RUN pacman -Syu --noconfirm xfce4 xfce4-goodies \
-	chromium vim wget tigervnc xorg \
+RUN pacman -Syu --noconfirm plasma-meta \
+	chromium vim wget tigervnc xorg-server \
 	python-numpy python-setuptools \
 	&& pacman -Scc --noconfirm
 
@@ -30,8 +29,7 @@ RUN	wget https://github.com/novnc/websockify/archive/v${websockify_version}.tar.
 	&& ln -s vnc.html index.html \
 	&& rm /noVNC.tar.gz
 
-COPY ./config/helpers.rc /root/.config/xfce4/
-COPY ./config/chromium-WebBrowser.desktop /root/.local/share/xfce4/helpers/
+COPY ./config/xstartup /root/.vnc/
 COPY ./start.sh /
 
 WORKDIR /root
