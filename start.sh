@@ -1,8 +1,11 @@
 #!/bin/bash
 
 umask 0077                # use safe default permissions
-mkdir -p "$HOME/.vnc"     # create config directory
 chmod go-rwx "$HOME/.vnc" # enforce safe permissions
+chmod +x "$HOME/.vnc/xstartup"
+
+# chromium
+sed -i 's/\/usr\/bin\/chromium/\/usr\/bin\/chromium --no-sandbox/g' /usr/share/applications/chromium.desktop
 
 # Start TigerVNC
 if [ ! -z $VNC_PASSWD ]; then
