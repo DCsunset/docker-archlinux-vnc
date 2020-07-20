@@ -3,7 +3,7 @@ ARG VERSION
 FROM archlinux:${VERSION:-latest}
 LABEL MAINTAINER="DCsunset"
 
-ENV noVNC_version=1.1.0
+ENV noVNC_version=1.2.0
 ENV websockify_version=0.9.0
 
 # Local debug
