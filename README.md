@@ -44,7 +44,7 @@ it is **insecure** when exposing the container on the Internet.
 * plasma-meta
 * kde-accessibility-meta
 * kde-system-meta
-* kde-utilities-meta
+* konsole
 * tigervnc
 * noVNC
 * wget
