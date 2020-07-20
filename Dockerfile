@@ -13,7 +13,7 @@ ENV websockify_version=0.9.0
 
 # Install apps
 RUN pacman -Syu --noconfirm plasma-meta \
-	kde-accessibility-meta kde-system-meta kde-utilities-meta \
+	kde-accessibility-meta kde-system-meta konsole \
 	chromium vim wget tigervnc xorg-server \
 	python-numpy python-setuptools \
 	&& pacman -Scc --noconfirm
